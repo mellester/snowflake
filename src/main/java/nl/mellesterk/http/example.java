@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Controller
 @RequestMapping("/public/todo")
-public class ToDoList {
+public class example {
 
     @GetMapping
     public String start(Model model) {

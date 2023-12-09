@@ -1,2 +1,8 @@
-rootProject.name = 'snowflake'
 
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'snowflake'

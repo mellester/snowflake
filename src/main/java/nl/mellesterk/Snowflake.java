@@ -1,2 +1,17 @@
-package nl.mellesterk;public class snowflake {
+package nl.mellesterk;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.scheduling.annotation.EnableAsync;
+
+@SpringBootApplication
+@EnableCaching
+@EnableAsync
+@ConfigurationPropertiesScan
+public class Snowflake {
+    public static void main(String[] args) {
+        SpringApplication.run(Snowflake.class, args);
+    }
+
 }
