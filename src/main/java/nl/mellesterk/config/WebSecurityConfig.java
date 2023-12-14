@@ -41,16 +41,7 @@ public class WebSecurityConfig {
         // Only allow frames if using h2 as the database
         if(activeProfile.contains("h2"))
             http.headers((h) -> h.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable));
-        http.authorizeHttpRequests((authorizeHttpRequests) ->
-                authorizeHttpRequests
-                        .requestMatchers("/public/**").permitAll()
-                        .requestMatchers("/api/**").permitAll()
-                        .anyRequest().authenticated());
         return http.build();
-
-//                .and()
-//                    .anonymous();
-        // @formatter:on
     }
 
 //    @Autowired
